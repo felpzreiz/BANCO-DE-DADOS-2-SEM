@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="642.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="page.exercicio2gui.InitialController">
+
+   <children>
+      <Button fx:id="botao_pais" layoutX="161.0" layoutY="213.0" mnemonicParsing="false" onAction="#abrirPais" prefHeight="31.0" prefWidth="136.0" text="País" />
+      <Button fx:id="botao_turma" layoutX="346.0" layoutY="275.0" mnemonicParsing="false" onAction="#abrirTurma" prefHeight="31.0" prefWidth="136.0" text="Turma" />
+      <Button fx:id="botao_time" layoutX="161.0" layoutY="275.0" mnemonicParsing="false" onAction="#abrirTime" prefHeight="31.0" prefWidth="136.0" text="Time" />
+      <Button fx:id="botao_equipe" layoutX="346.0" layoutY="337.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="136.0" text="Equipe" />
+      <Button fx:id="botao_torcida" layoutX="161.0" layoutY="337.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="136.0" text="Torcida" />
+      <Button fx:id="botao_missa" layoutX="346.0" layoutY="399.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="136.0" text="Missa" />
+      <Button fx:id="botao_colmeia" layoutX="161.0" layoutY="399.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="136.0" text="Colmeia" />
+      <Button fx:id="botao_horda" layoutX="346.0" layoutY="461.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="136.0" text="Horda" />
+      <Button fx:id="bota_matilha" layoutX="346.0" layoutY="213.0" mnemonicParsing="false" onAction="#abrirMatilha" prefHeight="31.0" prefWidth="136.0" text="Matilha" />
+      <Button fx:id="botao_banda" layoutX="161.0" layoutY="461.0" mnemonicParsing="false" onAction="#abrirBanda" prefHeight="31.0" prefWidth="136.0" text="Banda" />
+
+      <Label layoutX="159.0" layoutY="124.0" text="Escolha uma classe:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="159.0" layoutY="162.0" prefHeight="31.0" prefWidth="324.0" text="Selecione uma classe para acessar seus metodos:" />
+   </children>
+</Pane>

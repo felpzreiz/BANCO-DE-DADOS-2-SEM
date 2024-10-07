@@ -82,11 +82,61 @@ public class InitialController {
     }
 
     @FXML
+    protected void abrirTorcida() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Torcida.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setTitle("Classe Torcida");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    protected void abrirEquipe() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Equipe.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setTitle("Classe Equipe");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    protected void abrirColmeia() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Colmeia.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setTitle("Classe Colmeia");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    protected void abrirMissa() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Missa.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setTitle("Classe Missa");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
     protected void abrirBanda() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Banda.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setTitle("Classe Banda");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    protected void abrirHorda() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Horda.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setTitle("Classe Horda");
         stage.setScene(scene);
         stage.show();
     }

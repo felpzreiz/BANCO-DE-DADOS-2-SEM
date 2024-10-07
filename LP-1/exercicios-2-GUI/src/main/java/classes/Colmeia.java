@@ -7,26 +7,35 @@ public class Colmeia {
     private int idade;
     private double producaoDia;
 
-    public Colmeia(String funcao, int idade, double producaoDia) {
+    public void setFuncao(String funcao) {
         this.funcao = funcao;
+    }
+
+    public void setIdade(int idade) {
         this.idade = idade;
+    }
+
+    public void setProducaoDia(double producaoDia) {
         this.producaoDia = producaoDia;
     }
 
+    public String getFuncao() {
+        return funcao;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public double getProducaoDia() {
+        return producaoDia;
+    }
+
     public double prodTotal() {
-        return (producaoDia * (idade/356));
+        return (producaoDia * (idade*356));
     }
 
-    public void zumbir(){
-        System.out.println("Zz    ZzZz");
-        System.out.println(" zZ  zZ  zZ");
-        System.out.println("  ZzZz    ZzZz");
-    }
-
-    public String setFuncao() {
-        Scanner sc = new Scanner(System.in);
-        this.funcao = sc.next();
-
-        return(funcao);
+    public String zumbir(){
+        return("ZzZzZzZzZzZz");
     }
 }

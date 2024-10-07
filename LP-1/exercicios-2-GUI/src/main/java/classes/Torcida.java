@@ -11,8 +11,20 @@ public class Torcida {
         this.time = time;
     }
 
-    public void cantar(){
-        System.out.println("Uma vez " + time + ", sempre " + time + "!");
+    public String getTime() {
+        return time;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String cantar(){
+        return("Uma vez " + time + ", sempre " + time + "!");
     }
 
     public void gritar() {

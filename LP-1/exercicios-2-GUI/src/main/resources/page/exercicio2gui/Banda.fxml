@@ -23,7 +23,7 @@
                     </children></AnchorPane>
                 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="642.0">
                     <children>
-                        <GridPane layoutX="55.0" layoutY="59.0" prefHeight="200.0" prefWidth="532.0">
+                        <GridPane layoutX="55.0" layoutY="133.0" prefHeight="200.0" prefWidth="532.0">
                             <columnConstraints>
                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="187.0" />
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="16.0" />
@@ -60,7 +60,7 @@
                         <Button fx:id="define_instrumento" mnemonicParsing="false" onAction="#definirInstrumento" prefHeight="31.0" prefWidth="147.0" text="Definir" GridPane.columnIndex="4" GridPane.rowIndex="1" />
                             </children>
                         </GridPane>
-                  <GridPane layoutX="55.0" layoutY="348.0" prefHeight="90.0" prefWidth="324.0">
+                  <GridPane layoutX="55.0" layoutY="366.0" prefHeight="90.0" prefWidth="324.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="138.0" />
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="156.0" />
@@ -104,6 +104,16 @@
                      </children>
                   </GridPane>
                   <Button fx:id="botao_tocar" layoutX="55.0" layoutY="508.0" mnemonicParsing="false" onAction="#tocar" prefHeight="31.0" prefWidth="147.0" text="Tocar!" />
+                  <ImageView fitHeight="170.0" fitWidth="200.0" layoutX="221.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../imagens/classe-6.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="38.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../imagens/classe-8.png"/>
+                     </image>
+                  </ImageView>
                     </children>
                 </AnchorPane>
             </items>

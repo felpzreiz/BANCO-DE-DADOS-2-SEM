@@ -8,17 +8,25 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 import java.net.URL;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class EquipeController implements Initializable{
+    Statement stm = ConexaoDAO.conectarBanco();
     Equipe ninja = new Equipe();
 
     @FXML
     private ChoiceBox<String> myChoiceBox;
 
     private String[] cla =  {"Uzumaki", "Uchiha", "Hyuuga"};
+
+    public EquipeController() throws SQLException {
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -40,6 +48,9 @@ public class EquipeController implements Initializable{
 
     @FXML
     private TextField txt_1;
+
+    @FXML
+    private ImageView imagem;
 
     @FXML
     private Button define_nome;
@@ -65,6 +76,9 @@ public class EquipeController implements Initializable{
         ninja.setNome(txt_1.getText());
         labelNome.setText(ninja.getNome());
         labelNome.setVisible(true);
+        if (txt_1.getText() != null) {
+            ConexaoDAO.inserirEquipe(stm, txt_1.getText(), myChoiceBox.getValue(), ElementChoiceBox.getValue());
+        }
     }
 
 }

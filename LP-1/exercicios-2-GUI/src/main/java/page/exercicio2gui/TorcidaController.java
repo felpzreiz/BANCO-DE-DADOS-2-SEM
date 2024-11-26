@@ -7,7 +7,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import java.sql.SQLException;
+import java.sql.Statement;
+
 public class TorcidaController {
+    Statement stm = ConexaoDAO.conectarBanco();
     Torcida torcedor = new Torcida();
 
     @FXML
@@ -40,6 +44,9 @@ public class TorcidaController {
     @FXML
     private Label labelCanto;
 
+    public TorcidaController() throws SQLException {
+    }
+
     @FXML
     void definirNome(ActionEvent event) {
         torcedor.setNome(txt_1.getText());
@@ -58,6 +65,9 @@ public class TorcidaController {
     void tocar(ActionEvent event) {
         labelCanto.setVisible(true);
         labelCanto.setText(torcedor.cantar());
+        if(txt_2.getText() != null && txt_1.getText() != null) {
+            ConexaoDAO.inserirTorcida(stm, txt_1.getText(), txt_2.getText());
+        }
     }
 
 }

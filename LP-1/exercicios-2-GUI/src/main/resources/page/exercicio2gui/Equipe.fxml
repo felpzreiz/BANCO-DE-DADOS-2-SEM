@@ -89,6 +89,11 @@
                         </Label>
                      </children>
                   </GridPane>
+                  <ImageView fx:id="imagem" fitHeight="150.0" fitWidth="200.0" layoutX="419.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/equipe.png" />
+                     </image>
+                  </ImageView>
                     </children>
                 </AnchorPane>
             </items>

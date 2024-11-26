@@ -7,7 +7,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import java.sql.SQLException;
+import java.sql.Statement;
+
 public class MatilhaController {
+    Statement stm = ConexaoDAO.conectarBanco();
+
     Matilha cachorro = new Matilha();
 
     @FXML
@@ -34,11 +39,17 @@ public class MatilhaController {
     @FXML
     private Label labelLatido;
 
+    public MatilhaController() throws SQLException {
+    }
+
     @FXML
     void definirNome(ActionEvent event) {
         cachorro.setNome(txt_1.getText());
         labelNomeDefinido.setText(cachorro.getNome());
         labelNomeDefinido.setVisible(true);
+        if (txt_1.getText() != null) {
+            ConexaoDAO.inserirCachorro(stm, txt_1.getText());
+        }
     }
 
     @FXML

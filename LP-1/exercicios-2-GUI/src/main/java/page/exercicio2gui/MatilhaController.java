@@ -34,12 +34,22 @@ public class MatilhaController {
     private Label labelNome;
 
     @FXML
+    private Label labelNome2;
+
+    @FXML
+    private Label lastName;
+
+    @FXML
     private Label labelCorrida;
 
     @FXML
     private Label labelLatido;
 
     public MatilhaController() throws SQLException {
+    }
+
+    public void initialize() throws SQLException {
+        lastName.setText(ConexaoDAO.getCachorro(stm));
     }
 
     @FXML

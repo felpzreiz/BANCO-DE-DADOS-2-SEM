@@ -1,9 +1,6 @@
 package page.exercicio2gui;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class ConexaoDAO {
     public static Statement conectarBanco() throws SQLException {
@@ -58,5 +55,35 @@ public class ConexaoDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public static String getCachorro(Statement stm) {
+        String nomeCachorro = "";
+        try {
+            ResultSet result = stm.executeQuery("SELECT nome FROM matilha ORDER BY id DESC LIMIT 1");
+            while (result.next()) { // result.next() roda enquanto existirem dados no banco.
+                String nome = result.getString("nome");
+
+                nomeCachorro = nome;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return nomeCachorro; //
+    }
+
+    public static Double getDizimo(Statement stm) {
+        Double totalDizimo = 0.0;
+        try {
+            ResultSet result = stm.executeQuery("SELECT SUM(valor) AS soma FROM missa");
+            while (result.next()) { // result.next() roda enquanto existirem dados no banco.
+                Double dizimo = Double.parseDouble(result.getString("soma"));
+
+                totalDizimo = dizimo;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return totalDizimo; //
     }
 }

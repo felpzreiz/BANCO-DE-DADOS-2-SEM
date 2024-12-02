@@ -5,11 +5,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class InitialController {
+    Statement stm = ConexaoDAO.conectarBanco();
 
     @FXML
     private Button botao_torcida;
@@ -40,6 +44,16 @@ public class InitialController {
 
     @FXML
     private Button botao_time;
+
+    @FXML
+    private Label donation;
+
+    public InitialController() throws SQLException {
+    }
+
+    public void initialize() throws SQLException {
+        donation.setText("R$ " + String.format("%.2f" ,ConexaoDAO.getDizimo(stm)));
+    }
 
     @FXML
     protected void abrirPais() throws IOException {
